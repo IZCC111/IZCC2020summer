@@ -67,6 +67,7 @@ input::-moz-focus-inner {
 
 tr,th,td{
     width: 11%;
+    line-height: 70px;
 }
 
 input, select, textarea {
@@ -2250,7 +2251,8 @@ input, select, textarea {
 	#intro {
 		background: url("images/overlay.png"), url("../../images/intro.jpg");
 		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
+		background-attachment: inherit, fixed;
+		background-attachment: inherit, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
 	}

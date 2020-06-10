@@ -86,7 +86,6 @@ ul.clubs{
     display: inline;
 }
 
-
 /* Basic */
 
 	@-ms-viewport {
@@ -2265,6 +2264,24 @@ ul.clubs{
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
 	}
+@media (max-width: 530px){
+    #intro {
+		background: url("images/overlay.png"), url("../../images/introrwd.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: inherit, fixed;
+		background-position: top left, bottom center;
+		background-repeat: repeat, no-repeat;
+	}
+}
+@media (min-width: 530px) and (max-width: 800px){
+    #intro {
+		background: url("images/overlay.png"), url("../../images/introrwd2.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: inherit, fixed;
+		background-position: top left, bottom center;
+		background-repeat: repeat, no-repeat;
+	}
+}
 
 /* One */
 
@@ -2283,6 +2300,14 @@ ul.clubs{
 		background-attachment: inherit, fixed;
 		background-position: top left, center center;
 	}
+@media (max-width: 1200px){
+    #two {
+		background: url("images/overlay.png"), url("../../images/tworwd.jpg");
+        background-size: 256px 256px, cover;
+		background-attachment: inherit, fixed;
+		background-position: top left, center center;
+    }
+}
 
 /* One */
 
@@ -2301,7 +2326,14 @@ ul.clubs{
 		background-attachment: inherit, fixed;
 		background-position: top left, center center;
 	}
-
+@media (max-width: 1200px){
+    #four {
+		background: url("images/overlay.png"), url("../../images/fourrwd.jpg");
+        background-size: 256px 256px, cover;
+		background-attachment: inherit, fixed;
+		background-position: top left, center center;
+    }
+}
 /* Contact */
 
 	#contact {

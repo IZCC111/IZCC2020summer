@@ -34,7 +34,7 @@
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
 					<header>
-						<h2 style="font-family: 微軟正黑體;font-weight: bold;color: black">報名</h2>
+						<h2 style="font-family: 微軟正黑體;font-weight: bold;color: black"><br>報名</h2>
 					</header>
 					<!--<p style="color: black"> <br><strong>楓下共建成中景</strong> 是由建資、成電、楓資、景資四校共同舉辦的暑假營隊<br>我們有C++、python、html等課程，從基礎教起，不用怕沒經驗！<br>還有企業參訪及神秘活動，讓你的暑假不無聊！</p>-->
 					<footer>
@@ -62,7 +62,7 @@
                         <br><br>
                         <ul class="num">
                             <h3>報名流程</h3>
-                            <li>列印家長同意書，簽名後拍照或掃描上傳</li>
+                            <li>列印家長同意書<a href="assets/download/%E5%AE%B6%E9%95%B7%E5%90%8C%E6%84%8F%E6%9B%B8(%E5%AD%B8%E5%93%A1).pdf" class="ddl" download>【下載】</a>，簽名後拍照或掃描上傳</li>
                             <li>線上填寫報名表單並上傳檔案</li>
                             <li>名單公佈：7/5（五）</li>
                             <li>依照公告指示完成繳費</li>
@@ -81,6 +81,7 @@
                         </ul>
                         <ul class="dot">
                             <h3>退款辦法</h3>
+                            <li>7/11 23:59前 退 90% 費用</li>
                             <li>7/23 23:59前 退 50% 費用</li>
                             <li>活動開始後(7/24)，每請假一天退費 $100 元</li>
                         </ul>
@@ -95,9 +96,9 @@
         <section id="work">
             <div class="content">
                 <ul class="actions special">
-				    <li><input type="submit" value="填寫報名表" /></li>
+				    <li><input  id="btn" type="submit" value="填寫報名表" onclick="document.getElementById('sign').style.display = 'inherit';document.getElementById('btn').style.display = 'none'" /></li>
 				</ul>
-                <form class="sign" style="width: 100%;margin: 20px 0">
+                <form class="sign" id="sign" style="width: 100%;margin: 20px 0;display: none">
                     <h4 class="sign star">全名</h4>
                     <input type="text" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">性別</h4>
@@ -139,7 +140,7 @@
                     <input type="date" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">緊急聯絡人/關係/電話</h4>
                     <input type="text" style="width: 80%;margin: 20px 10%">
-                    <h4 class="sign star">繳交家長同意書（下載）（請拍下家長同意書上傳）</h4>
+                    <h4 class="sign star">繳交家長同意書<a href="assets/download/%E5%AE%B6%E9%95%B7%E5%90%8C%E6%84%8F%E6%9B%B8(%E5%AD%B8%E5%93%A1).pdf" class="dl" download>【下載】</a>（請拍下家長同意書上傳）</h4>
                     <input type="file" style="width: 80%;margin: 20px 10%">
                     <hr style="border: 0;height: 1px;background-image: linear-gradient(to right, #ccc, #333, #ccc);margin: 20px 5%" />
                     <h4 class="sign">備註</h4>
@@ -159,10 +160,16 @@
 						<li><a href="https://url.ckcsc.net/7EgGXb" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
 						<li><a href="https://url.ckcsc.net/4Xfxzy" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
 					</ul>
+                    <ul class="clubs">
+                        <li class="club"><a href="https://url.ckcsc.net/4yXMp" class="club" target="_blank">建中資訊 INFOR 33nd</a></li>
+                        <li class="club"><a href="https://url.ckcsc.net/5xHbdj" class="club" target="_blank">成功電研 CKCSC 33nd</a></li>
+                        <li class="club"><a href="https://url.ckcsc.net/urZUp" class="club" target="_blank">中山資研 ZSISC 27nd</a></li>
+                        <li class="club"><a href="#" class="club" target="_blank">景美電資 CMIOC 27nd</a></li>
+                    </ul>
 
 				<!-- Menu -->
 					<ul class="menu">
-						<li>&copy; IZCC SUMMER 2020</li><li>Design: IZCC Network Managemen &amp; HTML5 up</li>
+						<li>&copy; IZCC SUMMER 2020</li><li>Design: IZCC Network Management &amp; HTML5 up</li>
 					</ul>
 
 			</footer>

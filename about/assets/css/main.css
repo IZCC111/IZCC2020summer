@@ -71,6 +71,21 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+a.club{
+    text-decoration: none;    
+}
+
+li.club{
+    display: inline;
+    font-size: 15px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+ul.clubs{
+    display: inline;
+}
+
 
 /* Basic */
 

@@ -123,6 +123,40 @@ input, select, textarea {
 	appearance: none;
 }
 
+a.dl{
+    border-bottom: 2px dotted;
+    color: black;
+    text-decoration: none;
+}
+
+a.ddl{
+    border-bottom: 2px dotted;
+    color: #39454B;
+    text-decoration: none;
+}
+
+a.dl:hover{
+    color: lightgreen;
+}
+
+a.ddl:hover{
+    color: lightgreen;
+}
+
+a.club{
+    text-decoration: none;    
+}
+
+li.club{
+    display: inline;
+    font-size: 15px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+ul.clubs{
+    display: inline;
+}
 /* Basic */
 
 	@-ms-viewport {

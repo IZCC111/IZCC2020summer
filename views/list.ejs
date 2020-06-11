@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<!--
+    Phantom by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <%- include('head'); %>
+    </head>
+    <body>
+        <!-- Wrapper -->
+        <div id="wrapper">
+        <!-- Header -->
+            <%- include('header'); %>
+            <div class="main">
+                <!-- Main -->
+                <div class="inner" style="padding-bottom: 2em;">
+                    <h1>錄取名單</h1>
+                    <div class="">
+                        <ul>
+                        <% for(var i=0;i<Data.name.length;i++){ %>
+                            <li><%= Data.name[i] %> <%= Data.school[i] %></li>
+                        <% } %>    
+                        </ul>
+                    </div>
+                    <h1>匯款方式</h1>
+                    <p>
+                        匯款帳戶: 聯邦銀行(803) 中和分行 036504003156 蔡雨縉<br>
+                        請於 <b>7/10(三)</b> 之前完成匯款新台幣貳仟伍佰元，並將匯款後五碼，以及匯款時間填寫在表單中。<br>
+                        <a href="https://forms.gle/X37u4bN3xDXVsroF6">表單連結</a>    
+                    </p>
+                </div>
+            </div>
+        <!-- Footer --> 
+        <%- include('footer'); %>
+        </div>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

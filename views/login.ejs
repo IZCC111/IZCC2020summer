@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <%include model/head.ejs%>
+    </head>
+    <body>
+        <%include model/header.ejs%>
+
+        <div style="text-align: center;width: 50%;margin: auto">
+            <h1>管理員登入</h1>
+            <form action="/admin/login" method="post">
+                <label>名字<br><input name="name" required type="text"></label>
+                <label>密碼<br><input name="password" required type="password"></label>
+                <label>暗碼<br><input name="secret" required type="password"></label>
+                <input type="submit">
+            </form>
+        </div>
+        <%include model/footer.ejs%>
+    </body>
+</html>

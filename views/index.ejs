@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<%include model/head.ejs%>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->   
+		<%include model/header.ejs%>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content">
+					<header>
+						<h2 style="font-family: 微軟正黑體;font-weight: bold"></h2>
+					</header>
+					<br><br><p class="intro"> <strong>楓下共建成中景</strong> 是建資、成電、楓資、景資四校共同舉辦的暑假營隊<br>我們有C++、python、html等課程，從基礎教起，不用怕沒經驗！<br>還有企業參訪及神秘活動，讓你的暑假不無聊！</p>
+					<footer>
+						<a href="#work" class="button style2 down" style="color: black">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- Work -->             
+			<section id="work" class="main style3 primary" style="padding-bottom: 30px">
+				<div class="content">
+					<header>
+						<h2>追蹤臉書粉專!!!</h2>
+                        <p>注意事項、報到通知及錄取名單等重要事項將會在粉專公佈！快來按讚、追蹤吧！</p>
+					</header>
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116260913445112%26id%3D104874691250401&show_text=true&width=552&height=710&appId" width="70%" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+					<!-- Gallery  -->
+						<!--<div class="gallery">
+							<article class="from-left">
+								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
+							</article>
+							<article class="from-left">
+								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
+							</article>
+							<article class="from-left">
+								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
+							</article>
+						</div>-->
+
+				</div>
+			</section>
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2>立即報名</h2>
+						<p>對象以國三升高一為主~</p>
+					</header>
+					<div class="box">
+						<!--<form method="post" action="#">-->
+							<!--<div class="fields">
+								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
+								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
+								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+							</div>-->
+							<ul class="actions special">
+								<li><input type="submit" value="我要報名" onclick="location.href='signup'" /></li>
+							</ul>
+						<!--</form>-->
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<%include model/footer.ejs%>
+
+		<!-- Scripts -->
+		<%include model/script.ejs%>
+
+	</body>
+</html>

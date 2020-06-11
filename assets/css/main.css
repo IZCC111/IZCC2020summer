@@ -1894,7 +1894,7 @@ ul.clubs{
 						outline: 0;
 					}
 
-		@media screen and (max-width: 736px) {
+		/*@media screen and (max-width: 736px) {
 
 			#header {
 				height: 2.5em;
@@ -1918,7 +1918,16 @@ ul.clubs{
 					display: none;
 				}
 
+		}*/
+	@media screen and (max-width: 432px) {
+		#header .int{
+			display: none;
 		}
+
+		#header li a{
+			padding: auto 3px;
+		}
+	}
 
 	body {
 		padding-top: 3em;
@@ -2267,7 +2276,7 @@ ul.clubs{
 	}
     
 p.intro{
-    color: black;background-color: rgba(255,255,255,0.8);width: 70%;margin: auto 15%;border-radius: 10px;
+    color: black;background-color: rgba(255,255,255,0);width: 70%;margin: auto 15%;border-radius: 10px;
 }
 @media (max-width: 530px){
     #intro {
@@ -2279,7 +2288,7 @@ p.intro{
 	}
     
     p.intro{
-        color: black;background-color: rgba(255,255,255,0.8);width: 80%;margin: auto 10%;border-radius: 10px;
+        color: black;background-color: rgba(255,255,255,0);width: 80%;margin: auto 10%;border-radius: 10px;
     }
 }
 @media (min-width: 530px) and (max-width: 800px){
@@ -2292,7 +2301,7 @@ p.intro{
 	}
     
     p.intro{
-        color: black;background-color: rgba(255,255,255,0.8);width: 90%;margin: auto 5%;border-radius: 10px;
+        color: black;background-color: rgba(255,255,255,0);width: 90%;margin: auto 5%;border-radius: 10px;
     }
 }
 

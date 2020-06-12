@@ -66,7 +66,6 @@ router.get('/applylist',verify,async function (req,res) {
         member.id.push(list._id);
         member.admit.push(list.success);
     })
-    console.log(member.id.length)
     res.render('applylist',{data:member});
 })
 router.get('/applylist/:id',async function (req,res) {

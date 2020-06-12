@@ -2413,6 +2413,7 @@ p.intro{
 		background: url("images/overlay.png"), url("../../images/one.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: inherit, fixed;
+<<<<<<< HEAD
 		background-position: top left, center center;
 	}
 
@@ -2422,6 +2423,8 @@ p.intro{
 		background: url("images/overlay.png"), url("../../images/ckcsc.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: inherit, fixed;
+=======
+>>>>>>> 1c014d9a382d0c9265ee414432bc64c62694b0b0
 		background-position: top left, center center;
 	}
 
@@ -2445,6 +2448,7 @@ p.intro{
 
 /* Two */
 
+<<<<<<< HEAD
 #cmioc {
 	background: url("images/overlay.png"), url("../../images/cmioc.jpg");
 	background-size: 256px 256px, cover;
@@ -2455,6 +2459,10 @@ p.intro{
 @media (max-width: 1200px){
 	#cmioc {
 		background: url("images/overlay.png"), url("../../images/cmiocrwd.jpg");
+=======
+	#ckcsc {
+		background: url("images/overlay.png"), url("../../images/ckcsc.jpg");
+>>>>>>> 1c014d9a382d0c9265ee414432bc64c62694b0b0
 		background-size: 256px 256px, cover;
 		background-attachment: inherit, fixed;
 		background-position: top left, center center;
@@ -2530,6 +2538,42 @@ p.intro{
 	background-position: top left, center center;
 }
 
+
+@media (max-width: 1200px){
+	#ckcsc {
+		background: url("images/overlay.png"), url("../../images/ckcscrwd.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: inherit, fixed;
+		background-position: top left, center center;
+	}
+}
+
+/* One */
+
+#zsisc {
+	background: url("images/overlay.png"), url("../../images/zsisc.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: inherit, fixed;
+	background-position: top left, center center;
+}
+
+/* Two */
+
+#cmioc {
+	background: url("images/overlay.png"), url("../../images/cmioc.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: inherit, fixed;
+	background-position: top left, center center;
+}
+
+@media (max-width: 1200px){
+	#cmioc {
+		background: url("images/overlay.png"), url("../../images/cmiocrwd.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: inherit, fixed;
+		background-position: top left, center center;
+	}
+}
 
 /* Contact */
 

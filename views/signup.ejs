@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<%include model/head.ejs%>>
+		<%include model/head.ejs%>
 	</head>
 	<body class="is-preload">
 
@@ -121,7 +121,7 @@
                     <input name="identity"  type="text" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">生日</h4>
                     <input name="birthday" type="date" style="width: 80%;margin: 20px 10%">
-                    <h4 class="sign star">緊急聯絡人/關係/電話</h4>
+                    <h4 class="sign star">緊急聯絡人姓名/關係/電話</h4>
                     <input name="emergency" type="text" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">繳交家長同意書<a href="../signup/assets/download/家長同意書(學員).pdf" class="dl" download>【下載】</a>（請拍下家長同意書上傳）</h4>
                     <input type="file" accept="image/*" style="width: 80%;margin: 20px 10%">
@@ -130,7 +130,7 @@
                     <textarea name="note" style="font-size: 24px;width: 80%;margin: 30px 10%;height: 500px;resize: none"></textarea>
                     <ul class="actions special">
 				        <li><input type="submit" value="送出" style="background-color: #57aa61" /></li>
-                        <li><button id="clear" style="background-color: #c64f4f" >清除重填</button></li>
+				        <li><input type="reset" value="清除重填" style="background-color: #c64f4f" /></li>
 				    </ul>
                 </form>
             </div>

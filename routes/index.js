@@ -37,8 +37,8 @@ router.get('/history', function(req, res, next) {
 });
 
 router.get('/list', function(req, res, next) {
-    var lists = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../lists.json"), 'utf8'));
-    res.render('list', { title: '錄取名單', Data:lists });
+    //var lists = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../lists.json"), 'utf8'));
+    res.render('list', { title: '錄取名單' });
 });
 
 router.get('/api/getRegisterData', function(req, res, next) {
@@ -58,19 +58,22 @@ router.post('/admin/login',function (req,res) {
 
 router.get('/applylist',verify,async function (req,res) {
     const applyList =await apply.find();
-    const member={name:[],email:[],contact:[],id:[]}
+    const member={name:[],email:[],contact:[],id:[],admit:[]}
     applyList.forEach(function (list) {
         member.name.push(list.name);
         member.email.push(list.email);
         member.contact.push(list.phone);
         member.id.push(list._id);
+        member.admit.push(list.success);
     })
-    res.render('index',{data:member});
+    console.log(member.id.length)
+    res.render('applylist',{data:member});
 })
 router.get('/applylist/:id',async function (req,res) {
-    const member = await apply.findOne({_id:req.query});
+    const member = await apply.findOne({_id:req.params.id});
     if(!member) return res.status(404).render('error');
-    res.render('member',{data:member})
+    var image = new Buffer(member.parentalConsent).toString('base64');
+    res.render('memberInfo',{data:member,image})
 })
 
 function shuffle(arr) {

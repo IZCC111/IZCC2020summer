@@ -2,6 +2,9 @@ document.write();
 $(document).ready(function () {
     $('#sign').on('submit',function (e) {
         e.preventDefault();
+        if(textarea===true||input===true){
+            return alert('你輸入的資料已超過限制!')
+        }
         const sheet=$('#sign')[0];
         var form = new FormData(sheet);
         form.append('file',$('input[type=file]')[0].files[0]);
@@ -13,7 +16,7 @@ $(document).ready(function () {
             data:  form,
             success: function (data) {
                 alert(data);
-                window.location('/');
+                window.location.replace('/');
             }, error: function (data) {
                 alert(data.responseText)
                 setTimeout(function () {
@@ -22,10 +25,30 @@ $(document).ready(function () {
             }
         });
     })
+    var input=false;
+    var textarea=false;
     $('#clear').on('click',function (e) {
         e.preventDefault();
         $('input[type=text],input[type=file], select, textarea').each(function () {
             $(this).val('');
         })
+    })
+    $('input').on('input',function () {
+        if($(this).val().length>30){
+            $(this).css('border-color','red');
+            input=true;
+        }else {
+            $(this).css('border-color', '#e5e6e7');
+            input=false;
+        }
+    })
+    $('textarea').on('input',function () {
+        if($(this).val().length>200){
+            $(this).css('border-color','red');
+            textarea=true;
+        }else {
+            $(this).css('border-color', '#e5e6e7');
+            textarea=false;
+        }
     })
 })

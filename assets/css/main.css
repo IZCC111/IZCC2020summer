@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -2298,7 +2299,6 @@ ul.clubs{
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		position: relative;
 		margin: 0;
 		line-height: 1em;
 		padding: 1.5em;
@@ -2413,6 +2413,7 @@ p.intro{
 		background: url("images/overlay.png"), url("../../images/one.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: inherit, fixed;
+<<<<<<< HEAD
 		background-position: top left, center center;
 	}
 
@@ -2422,8 +2423,113 @@ p.intro{
 		background: url("images/overlay.png"), url("../../images/ckcsc.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: inherit, fixed;
+=======
+>>>>>>> 1c014d9a382d0c9265ee414432bc64c62694b0b0
 		background-position: top left, center center;
 	}
+
+@media (max-width: 1200px){
+	#ckcsc {
+		background: url("images/overlay.png"), url("../../images/ckcscrwd.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: inherit, fixed;
+		background-position: top left, center center;
+	}
+}
+
+/* One */
+
+#zsisc {
+	background: url("images/overlay.png"), url("../../images/zsisc.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: inherit, fixed;
+	background-position: top left, center center;
+}
+
+/* Two */
+
+#cmioc {
+	background: url("images/overlay.png"), url("../../images/cmioc.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: inherit, fixed;
+	background-position: top left, center center;
+}
+
+@media (max-width: 1200px){
+	#cmioc {
+		background: url("images/overlay.png"), url("../../images/cmiocrwd.jpg");
+	}
+}
+
+/* One */
+
+#cpp {
+	background: url("images/overlay.png"), url("../../images/cpp.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: inherit, fixed;
+	background-position: top left, center center;
+}
+
+/* Two */
+
+#blender {
+	background: url("images/overlay.png"), url("../../images/two.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: initial, fixed;
+	background-position: top left, center center;
+}
+
+/* Three */
+
+#visit {
+	background: url("images/overlay.png"), url("../../images/three.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: inherit, fixed;
+	background-position: top left, center center;
+}
+
+/* Two */
+
+#python {
+	background: url("images/overlay.png"), url("../../images/python.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: inherit,fixed;
+	background-position: top left, center center;
+}
+@media (max-width: 1200px){
+	#python {
+		background: url("images/overlay.png"), url("../../images/pythonrwd.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: inherit, fixed;
+		background-position: top left, center center;
+	}
+}
+
+/* Two */
+
+#html {
+	background: url("images/overlay.png"), url("../../images/two.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
+
+/* Two */
+
+#computer {
+	background: url("images/overlay.png"), url("../../images/two.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
+
+#ml {
+	background: url("images/overlay.png"), url("../../images/two.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
+
 
 @media (max-width: 1200px){
 	#ckcsc {

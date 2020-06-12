@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <%include model/head.ejs%>
+</head>
+<body class="is-preload">
+
+<!-- Header -->
+<%include model/header.ejs%>
+
+<!-- Intro -->
+<section id="intro" class="main style1 dark fullscreen">
+    <div class="content">
+        <header>
+            <h2 style="font-family: 微軟正黑體;font-weight: bold"></h2>
+        </header>
+        <br><br><p class="intro"> <h1>詳細資料</h1>
+        <footer>
+            <a href="#work" class="button style2 down" style="color: black">More</a>
+        </footer>
+    </div>
+</section>
+
+<!-- Work -->
+<section id="work" class="main style3 primary" style="padding-bottom: 30px">
+    <div class="content">
+        <table>
+            <tr>
+                <td>名字：<%=data.name%></td>
+                <td>性別：<%=data.gender%></td>
+                <td>衣服大小：<%=data.size%></td>
+                <td>國中：<%=data.school%></td>
+            </tr>
+            <tr>
+                <td colspan="2">電子郵件：<%=data.email%></td>
+                <td>連絡電話：<%=data.phone%></td>
+                <td>父母：<%=data.parent%></td>
+            </tr>
+            <tr>
+                <td>飲食：<%=data.eat%></td>
+                <td>緊急聯絡人：<%=data.emergency%></td>
+                <td>交通方式：<%=data.traffic%></td>
+            </tr>
+            <tr>
+                <td>身分證：<%=data.identity%></td>
+                <td>生日:<%=data.birthday%></td>
+            </tr>
+            <tr>
+                <td colspan="4"><textarea readonly ><%=data.note%></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="4"><img id="admit" src="data:image/;base64,<%=image%>"></td>
+            </tr>
+        </table>
+        <input type="submit" data-id="<%=data.id%>" value="確認資格">
+        <input type="submit" data-id="<%=data.id%>" value="取消資格">
+    </div>
+</section>
+
+<!-- Contact -->
+
+
+<!-- Footer -->
+<%include model/footer.ejs%>
+
+<!-- Scripts -->
+<%include model/script.ejs%>
+<script>
+    $('input[type=submit]').on('click',function () {
+        const data=($(this).val() === '確認資格');
+        $.ajax({
+            type:'GET',
+            url:'../../apply/admit/<%=data.id%>?value='+data,
+            success:function () {
+                alert('成功改變資格為'+data);
+                window.location.replace('../applylist')
+            }
+        })
+    })
+</script>
+</body>
+</html>

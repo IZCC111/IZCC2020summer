@@ -16,7 +16,7 @@ $(document).ready(function () {
             data:  form,
             success: function (data) {
                 alert(data);
-                window.location.replace('/');
+                window.location.href='/';
             }, error: function (data) {
                 alert(data.responseText)
                 setTimeout(function () {

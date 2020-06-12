@@ -63,7 +63,7 @@
 <%include model/script.ejs%>
 <script>
     $('.list').on('click',function () {
-        window.location.replace($(this).attr('data-id'))
+        window.location.href=$(this).attr('data-id');
     })
 </script>
 <style>

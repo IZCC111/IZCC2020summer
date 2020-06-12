@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<%include model/head.ejs%>>
+		<%include model/head.ejs%>
 	</head>
 	<body class="is-preload">
 
@@ -38,14 +38,14 @@
                             <h3>報名日程</h3>
                             <li>報名時間：5/18（六） ~ 7/4（四）</li>
                             <li>公佈錄取名單：7/5（五）</li>
-                            <li>營隊活動時間：7/24（三） ~ 7/30（二）
+                            <li>營隊活動時間：7/27（一） ~ 8/2（日）
                                 每日活動以8:00 AM ~ 5:00 PM 為主，供應午餐。
                                 （活動日程表請參見課程資訊，主辦單位保留異動空間）</li>
                         </ul>
                         <br><br>
                         <ul class="num">
                             <h3>報名流程</h3>
-                            <li>列印家長同意書<a href="../signup/assets/download/家長同意書(學員).pdf" class="ddl" download>【下載】</a>，簽名後拍照或掃描上傳</li>
+                            <li>列印家長同意書<a href="../file/%E5%AE%B6%E9%95%B7%E5%90%8C%E6%84%8F%E6%9B%B8(%E5%AD%B8%E5%93%A1).pdf" class="ddl" download>【下載】</a>，簽名後拍照或掃描上傳</li>
                             <li>線上填寫報名表單並上傳檔案</li>
                             <li>名單公佈：7/5（五）</li>
                             <li>依照公告指示完成繳費</li>
@@ -70,7 +70,7 @@
                         </ul>
                         <ul class="dot">
                             <h3>遇到問題?</h3>
-                            <li>請參照 Q&A ，或是洽詢粉專!</li>
+                            <li>請洽詢粉專!</li>
                         </ul>
                     </section>
                 </div>
@@ -121,16 +121,16 @@
                     <input name="identity"  type="text" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">生日</h4>
                     <input name="birthday" type="date" style="width: 80%;margin: 20px 10%">
-                    <h4 class="sign star">緊急聯絡人/關係/電話</h4>
+                    <h4 class="sign star">緊急聯絡人姓名/關係/電話</h4>
                     <input name="emergency" type="text" style="width: 80%;margin: 20px 10%">
-                    <h4 class="sign star">繳交家長同意書<a href="../signup/assets/download/家長同意書(學員).pdf" class="dl" download>【下載】</a>（請拍下家長同意書上傳）</h4>
+                    <h4 class="sign star">繳交家長同意書<a href="../file/%E5%AE%B6%E9%95%B7%E5%90%8C%E6%84%8F%E6%9B%B8(%E5%AD%B8%E5%93%A1).pdf" class="dl" download>【下載】</a>（請拍下家長同意書上傳）</h4>
                     <input type="file" accept="image/*" style="width: 80%;margin: 20px 10%">
                     <hr style="border: 0;height: 1px;background-image: linear-gradient(to right, #ccc, #333, #ccc);margin: 20px 5%" />
                     <h4 class="sign">備註</h4>
                     <textarea name="note" style="font-size: 24px;width: 80%;margin: 30px 10%;height: 500px;resize: none"></textarea>
                     <ul class="actions special">
 				        <li><input type="submit" value="送出" style="background-color: #57aa61" /></li>
-                        <li><button id="clear" style="background-color: #c64f4f" >清除重填</button></li>
+				        <li><input type="reset" value="清除重填" style="background-color: #c64f4f" /></li>
 				    </ul>
                 </form>
             </div>

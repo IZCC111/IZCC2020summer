@@ -51,7 +51,7 @@ router.get('/adminlog',function (req,res) {
 router.post('/admin/login',function (req,res) {
     if (req.body.secret!==process.env.SECRET
         || req.body.name!==process.env.ADMIN
-        ||req.body.password!==process.env.PASSWORD) return res.send('錯誤!')
+        ||req.body.password!==process.env.PASSWORD) return res.status(400).send('錯誤!')
     const token= jwt.sign('ADMIN:'+process.env.ADMIN,process.env.SECRET);
     res.cookie('adminToken',token,{httpOnly:true,sameSite:'strict'}).send('登入成功');
 })
@@ -71,7 +71,7 @@ router.get('/applylist',verify,async function (req,res) {
 router.get('/applylist/:id',async function (req,res) {
     const member = await apply.findOne({_id:req.params.id});
     if(!member) return res.status(404).render('error');
-    var image = new Buffer(member.parentalConsent).toString('base64');
+    var image = Buffer.from(member.parentalConsent).toString('base64');
     res.render('memberInfo',{data:member,image:image})
 })
 

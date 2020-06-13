@@ -44,11 +44,14 @@
             <tr>
                 <td>飲食：<%=data.eat%></td>
                 <td>緊急聯絡人：<%=data.emergency%></td>
-                <td>交通方式：<%=data.traffic%></td>
+                <td colspan="2">交通方式：<%=data.traffic%></td>
             </tr>
             <tr>
                 <td>身分證：<%=data.identity%></td>
-                <td>生日:<%=data.birthday%></td>
+                <td>生日:<%= data.birthday.getFullYear()%>年
+                    <%=data.birthday.getMonth()+1%>月
+                    <%=data.birthday.getDate()%>日
+                </td>
             </tr>
             <tr>
                 <td colspan="4"><textarea readonly ><%=data.note%></textarea></td>
@@ -77,8 +80,11 @@
             type:'GET',
             url:'../../apply/admit/<%=data.id%>?value='+data,
             success:function () {
-                alert('成功改變資格為'+data);
-                window.location.href='../applylist'
+                good_message('成功改變資格為'+data);
+                setTimeout(function () {
+                    window.location.href='../applylist'
+                },1000)
+
             }
         })
     })

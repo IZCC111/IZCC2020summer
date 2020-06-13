@@ -20,17 +20,21 @@
     <script>
         $('form').on('submit',function (e) {
             e.preventDefault();
+            $('input[type=submit]').prop('disabled',true);
             $.ajax({
                 url:"/admin/login",
                 type: 'POST',
                 data:$(this).serialize(),
                 success: function (data) {
-                    alert(data);
-                    window.location.href='/';
-                }, error: function (data) {
-                    alert(data.responseText)
+                    good_message(data);
                     setTimeout(function () {
-                        $('.create').prop('disabled',false);
+                        window.location.href='/';
+                    },1000)
+
+                }, error: function (data) {
+                    bad_message(data.responseText)
+                    setTimeout(function () {
+                        $('input[type=submit]').prop('disabled',false);
                     },1000)
                 }
 

@@ -7,7 +7,7 @@
 
         <div style="text-align: center;width: 50%;margin: auto">
             <h1>管理員登入</h1>
-            <form action="/admin/login" method="post">
+            <form  method="post">
                 <label>名字<br><input name="name" required type="text"></label>
                 <label>密碼<br><input name="password" required type="password"></label>
                 <label>暗碼<br><input name="secret" required type="password"></label>
@@ -16,4 +16,29 @@
         </div>
         <%include model/footer.ejs%>
     </body>
+    <%include model/script.ejs%>
+    <script>
+        $('form').on('submit',function (e) {
+            e.preventDefault();
+            $('input[type=submit]').prop('disabled',true);
+            $.ajax({
+                url:"/admin/login",
+                type: 'POST',
+                data:$(this).serialize(),
+                success: function (data) {
+                    good_message(data);
+                    setTimeout(function () {
+                        window.location.href='/';
+                    },1000)
+
+                }, error: function (data) {
+                    bad_message(data.responseText)
+                    setTimeout(function () {
+                        $('input[type=submit]').prop('disabled',false);
+                    },1000)
+                }
+
+            })
+        })
+    </script>
 </html>

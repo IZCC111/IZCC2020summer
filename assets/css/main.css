@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -2320,7 +2321,6 @@ ul.clubs{
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		position: relative;
 		margin: 0;
 		line-height: 1em;
 		padding: 1.5em;
@@ -2641,3 +2641,116 @@ p.intro{
 			}
 
 		}
+<<<<<<< HEAD
+=======
+.message {
+	top: 24px;
+}
+
+.message-alert {
+	border: 2px #ccc solid;
+	border-radius: 10px;
+	display: flex;
+
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	position: fixed;
+	background-color: #ffffff;
+	padding: 20px;
+	top: 60px;
+	left: 50%;
+	margin-left: -15%;
+	width: 30%;
+	font-size: 32px;
+	animation-name: message-div-in;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	z-index: 1010;
+}
+
+.message-content {
+	/*background-color: rgb(185, 185, 185);*/
+	transition: color;
+	color: #000000;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	word-wrap: break-word;
+	animation-name: message-content-in;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+}
+
+.good-message-line {
+	height: 5px;
+	top: 1px;
+	background-color: rgb(76, 175, 80);
+	width: 100%;
+	margin-bottom: 5%;
+	animation-name: good-message-line-in;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+}
+
+.bad-message-line {
+	height: 5px;
+	top: 1px;
+	background-color: rgb(232, 15, 15);
+	width: 100%;
+	margin-bottom: 5%;
+	animation-name: bad-message-line-in;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+}
+
+@keyframes message-div-in {
+	0% {
+		top: -20%;
+	}
+
+	100% {
+		top: 60px;
+	}
+}
+
+@keyframes message-content-in {
+	0% {
+		color: #ffffff;
+	}
+	100% {
+		color: black;
+	}
+	100% {
+		color: black;
+	}
+}
+
+@keyframes good-message-line-in {
+	0% {
+		background-color: rgba(0, 0, 0, 0);
+		width: 0;
+	}
+	100% {
+		background-color: rgb(76, 175, 80);
+		width: 100%;
+	}
+	100% {
+		background-color: rgb(76, 175, 80);
+		width: 100%;
+	}
+}
+@keyframes bad-message-line-in {
+	0% {
+		background-color: rgba(0, 0, 0, 0);
+		width: 0;
+	}
+	100% {
+		background-color: rgb(232, 15, 15);
+		width: 100%;
+	}
+	100% {
+		background-color: rgb(232, 15, 15);
+		width: 100%;
+	}
+}
+>>>>>>> 10c020ec676e7a790db09b4a34fa1a9bbfa26926

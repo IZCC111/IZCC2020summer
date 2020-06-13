@@ -83,14 +83,14 @@
 				</ul>
                 <form class="sign" id="sign" style="width: 100%;margin: 20px 0;display: none">
                     <h4 class="sign star">全名</h4>
-                    <input type="text" name="name" style="width: 80%;margin: 20px 10%">
+                    <input type="text" required name="name" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">性別</h4>
-                    <select name="gender" style="width: 80%;margin: 20px 10%">
-                        <option value ="man">男</option>
-                        <option value ="woman">女</option>
+                    <select name="gender" required style="width: 80%;margin: 20px 10%">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
                     </select>
                     <h4 class="sign star">訓服尺寸</h4>
-                    <select name="size" style="width: 80%;margin: 20px 10%">
+                    <select name="size" required style="width: 80%;margin: 20px 10%">
                         <option value ="XS">XS</option>
                         <option value ="S">S</option>
                         <option value ="M">M</option>
@@ -101,24 +101,24 @@
                         <option value ="4L">4L</option>
                     </select>
                     <h4 class="sign">就讀國中</h4>
-                    <input name="school" type="text" style="width: 80%;margin: 20px 10%">
+                    <input name="school"  type="text" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">連絡電話</h4>
-                    <input name="phone" type="text" style="width: 80%;margin: 20px 10%">
+                    <input name="phone" required type="text" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">家長姓名</h4>
-                    <input name="parent" type="text" style="width: 80%;margin: 20px 10%">
+                    <input name="parent" required type="text" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">交通方式</h4>
-                    <input name="traffic" type="text" class="sign" placeholder="(自行前往/家長接送)" style="width: 80%;margin: 20px 10%">
+                    <input name="traffic" required type="text" class="sign" placeholder="(自行前往/家長接送)" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">葷素習慣</h4>
-                    <select name="eat" style="width: 80%;margin: 20px 10%">
-                        <option value ="meat">葷</option>
-                        <option value ="vegetarian">素</option>
+                    <select name="eat" required style="width: 80%;margin: 20px 10%">
+                        <option value ="葷">葷</option>
+                        <option value ="素">素</option>
                     </select>
                     <h4 class="sign star">Email</h4>
-                    <input name="email" type="email" class="sign" style="width: 80%;margin: 20px 10%">
+                    <input name="email" required type="email" class="sign" style="width: 80%;margin: 20px 10%">
                     <h3 style="text-align: center;line-height: 100px">保險資訊</h3>
                     <hr style="border: 0;height: 1px;background-image: linear-gradient(to right, #ccc, #333, #ccc);margin: 20px 5%" />
                     <h4 class="sign star">身份證字號</h4>
-                    <input name="identity"  type="text" style="width: 80%;margin: 20px 10%">
+                    <input name="identity" required  type="text" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">生日</h4>
                     <input name="birthday" type="date" style="width: 80%;margin: 20px 10%">
                     <h4 class="sign star">緊急聯絡人姓名/關係/電話</h4>

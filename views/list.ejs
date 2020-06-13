@@ -6,40 +6,54 @@
 -->
 <html>
     <head>
-        <%- include('head'); %>
+        <%- include model/head.ejs %>
     </head>
-    <body>
-        <!-- Wrapper -->
-        <div id="wrapper">
-        <!-- Header -->
-            <%- include('header'); %>
-            <div class="main">
-                <!-- Main -->
-                <div class="inner" style="padding-bottom: 2em;">
-                    <h1>錄取名單</h1>
-                    <div class="">
-                        <ul>
-                        <% for(var i=0;i<Data.name.length;i++){ %>
-                            <li><%= Data.name[i] %> <%= Data.school[i] %></li>
-                        <% } %>    
-                        </ul>
-                    </div>
-                    <h1>匯款方式</h1>
-                    <p>
-                        匯款帳戶: 聯邦銀行(803) 中和分行 036504003156 蔡雨縉<br>
-                        請於 <b>7/10(三)</b> 之前完成匯款新台幣貳仟伍佰元，並將匯款後五碼，以及匯款時間填寫在表單中。<br>
-                        <a href="https://forms.gle/X37u4bN3xDXVsroF6">表單連結</a>    
-                    </p>
-                </div>
-            </div>
-        <!-- Footer --> 
-        <%- include('footer'); %>
+    <body class="is-preload">
+
+    <!-- Header -->
+    <%include model/header.ejs%>
+
+    <!-- Intro -->
+    <section id="intro" class="main style1 dark fullscreen">
+        <div class="content">
+            <header>
+                <h2 style="font-family: 微軟正黑體;font-weight: bold"></h2>
+            </header>
+            <br><br><p class="intro"> <strong>楓下共建成中景</strong> 是建資、成電、楓資、景資四校共同舉辦的暑假營隊<br>我們有C++、python、html等課程，從基礎教起，不用怕沒經驗！<br>還有企業參訪及神秘活動，讓你的暑假不無聊！</p>
+            <footer>
+                <a href="#work" class="button style2 down" style="color: black">More</a>
+            </footer>
         </div>
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/skel.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-        <script src="assets/js/main.js"></script>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="main style3 primary" style="padding-bottom: 30px">
+        <div class="content">
+            <!-- Main -->
+            <div class="inner" style="padding-bottom: 2em;">
+                <h1>錄取名單</h1>
+                <div class="">
+                    <ul>
+
+                    </ul>
+                </div>
+                <h1>匯款方式</h1>
+                <p>
+                    匯款帳戶: 聯邦銀行(803) 中和分行 036504003156 蔡雨縉<br>
+                    請於 <b>7/10(三)</b> 之前完成匯款新台幣貳仟伍佰元，並將匯款後五碼，以及匯款時間填寫在表單中。<br>
+                    <a href="https://forms.gle/X37u4bN3xDXVsroF6">表單連結</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+
+    <!-- Footer -->
+    <%include model/footer.ejs%>
+
+    <!-- Scripts -->
+    <%include model/script.ejs%>
+
     </body>
 </html>

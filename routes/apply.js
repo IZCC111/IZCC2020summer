@@ -34,11 +34,16 @@ router.post('/register',upload.single('file'), async function(req, res) {
     })
     try{
         await formInfo.save();
-        res.send('報名成功!請隨時關注我們的粉專來確定活動消息');
+        res.send('報名成功!請隨時關注我們的粉專來確定活動消息!');
     }catch (e) {
-        res.status(400).send('你有欄位沒填!');
+        console.log(e)
+        res.status(400).send('你有欄位沒填或是字數超過限制!');
     }
 
 });
 
+router.get('/admit/:id',async function (req,res) {
+    await apply.updateOne({_id:req.params.id},{$set:{success:req.query.value}})
+    res.send('success')
+})
 module.exports=router;

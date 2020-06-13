@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <%include model/head.ejs%>
+</head>
+<body class="is-preload">
+
+<!-- Header -->
+<%include model/header.ejs%>
+
+<!-- Intro -->
+<section id="intro" class="main style1 dark fullscreen">
+    <div class="content">
+        <header>
+            <h2 style="font-family: 微軟正黑體;font-weight: bold"></h2>
+        </header>
+        <br><br><p class="intro"><h1>報名列表</h1>
+        <footer>
+            <a href="#work" class="button style2 down" style="color: black">More</a>
+        </footer>
+    </div>
+</section>
+
+<!-- Work -->
+<section id="work" class="main style3 primary" style="padding-bottom: 30px">
+    <div class="content">
+
+       <table>
+           <tr>
+               <td>姓名</td>
+               <td>電子郵件</td>
+               <td>連絡電話</td>
+               <td>錄取</td>
+           </tr>
+           <%for (let i=0;i<data.id.length;i++){  %>
+                <tr class="list" data-id="/applylist/<%=data.id[i]%>">
+                    <td><%=data.name[i]%></td>
+                    <td><%=data.email[i]%></td>
+                    <td><%=data.contact[i]%></td>
+                    <% if(data.admit[i]===false){ %>
+                        <td>否</td>
+                    <%}else{%>
+                        <td>是</td>
+                    <%}%>
+                </tr>
+           <% } %>
+       </table>
+
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<%include model/footer.ejs%>
+
+<!-- Scripts -->
+<%include model/script.ejs%>
+<script>
+    $('.list').on('click',function () {
+        window.location.href=$(this).attr('data-id');
+    })
+</script>
+<style>
+    .list:hover{
+        background: #9ac8e9;
+        color: white;
+        cursor: pointer;
+
+    }
+</style>
+
+</body>
+</html>

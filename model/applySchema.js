@@ -3,48 +3,58 @@ const mongoose = require('mongoose');
 const applySchema = new mongoose.Schema({
     name: {
         type:String,
-        required:true
+        required:true,
+        max: 30
     },
     gender:{
         type: String,
-        required: true
+        required: true,
+        max: 30
     },
     size:{
         type:String,
-        required:true
+        required:true,
+        max: 30
     },
     school:String,
     phone:{
         type:String,
-        required:true
+        required:true,
+        max: 30
     },
     parent:{
         type:String,
-        required:true
+        required:true,
+        max: 30
     },
     traffic:{
         type:String,
-        required:true
+        required:true,
+        max: 30
     },
     eat:{
         type:String,
-        required:true
+        required:true,
+        max: 30
     },
     email:{
         type:String,
-        required:true
+        required:true,
+        max: 30
     },
     identity:{
         type:String,
-        required:true
+        required:true,
+        max: 30
     },
     emergency:{
         type:String,
-        required:true
+        required:true,
+        max: 30
     },
     birthday:{
         type:Date,
-        required:true
+        required:true,
     },
     parentalConsent:{
         type:Buffer,
@@ -52,7 +62,7 @@ const applySchema = new mongoose.Schema({
     },
     note:{
         type:String,
-        max:1024
+        max:150
     },
     success:{
         type:Boolean,

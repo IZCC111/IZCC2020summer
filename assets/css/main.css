@@ -24,6 +24,7 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: "Noto Sans TC";
 }
 
 article, aside, details, figcaption, figure,
@@ -634,7 +635,7 @@ ul.clubs{
 /* Type */
 
 	body, input, textarea, select {
-		font-family: "Source Sans Pro", "sans-serif";
+		font-family: "Noto Sans TC" , "Source Sans Pro", "sans-serif";
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;

@@ -145,6 +145,10 @@ h4{
 	margin: 20px 10%;
 }
 
+h4.sign{
+	line-height: 32px;
+}
+
 .star::before{
 	content: "*";
 	color: red;
@@ -2537,9 +2541,9 @@ p.intro{
 /* Two */
 
 #html {
-	background: url("images/overlay.png"), url("../../images/two.jpg");
+	background: url("images/overlay.png"), url("../../images/html.jpg");
 	background-size: 256px 256px, cover;
-	background-attachment: fixed, fixed;
+	background-attachment: inherit, fixed;
 	background-position: top left, center center;
 }
 
@@ -2548,14 +2552,14 @@ p.intro{
 #computer {
 	background: url("images/overlay.png"), url("../../images/two.jpg");
 	background-size: 256px 256px, cover;
-	background-attachment: fixed, fixed;
+	background-attachment: inherit, fixed;
 	background-position: top left, center center;
 }
 
 #ml {
 	background: url("images/overlay.png"), url("../../images/two.jpg");
 	background-size: 256px 256px, cover;
-	background-attachment: fixed, fixed;
+	background-attachment: inherit, fixed;
 	background-position: top left, center center;
 }
 

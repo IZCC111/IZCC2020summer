@@ -56,10 +56,6 @@ const applySchema = new mongoose.Schema({
         type:Date,
         required:true,
     },
-    parentalConsent:{
-        type:Buffer,
-        required:true
-    },
     note:{
         type:String,
         max:150
@@ -68,7 +64,6 @@ const applySchema = new mongoose.Schema({
         type:Boolean,
         default:false
     }
-
-})
+});
 
 module.exports=mongoose.model('apply',applySchema);

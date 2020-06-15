@@ -2550,14 +2550,14 @@ p.intro{
 /* Two */
 
 #computer {
-	background: url("images/overlay.png"), url("../../images/two.jpg");
+	background: url("images/overlay.png"), url("../../images/computer.jpg");
 	background-size: 256px 256px, cover;
 	background-attachment: inherit, fixed;
 	background-position: top left, center center;
 }
 
 #ml {
-	background: url("images/overlay.png"), url("../../images/two.jpg");
+	background: url("images/overlay.png"), url("../../images/ml.png");
 	background-size: 256px 256px, cover;
 	background-attachment: inherit, fixed;
 	background-position: top left, center center;

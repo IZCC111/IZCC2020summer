@@ -17,7 +17,10 @@ router.get('/about',function(req, res, next) {
 });
 router.get('/class',function (req,res) {
     res.render('class');
-})
+});
+router.get('/qa',function (req,res) {
+    res.render('QA');
+});
 
 router.get('/signup',function(req, res, next) {
     res.render('signup', { title: '報名' });

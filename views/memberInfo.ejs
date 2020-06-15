@@ -28,38 +28,44 @@
 
 <!-- Work -->
 <section id="work" class="main style3 primary" style="padding-bottom: 30px">
-    <div class="content">
-        <table>
+    <div class="content" style="width: 100%">
+        <table style="width: 80%;margin: 20px 10%;border:1px solid lightgray;text-align: left;">
             <tr>
                 <td>名字：<%=data.name%></td>
                 <td>性別：<%=data.gender%></td>
                 <td>衣服大小：<%=data.size%></td>
-                <td>國中：<%=data.school%></td>
             </tr>
             <tr>
+                <td>國中：<%=data.school%></td>
                 <td colspan="2">電子郵件：<%=data.email%></td>
+            </tr>
+            <tr>
                 <td>連絡電話：<%=data.phone%></td>
                 <td>父母：<%=data.parent%></td>
+                <td>飲食：<%=data.eat%></td>
             </tr>
             <tr>
-                <td>飲食：<%=data.eat%></td>
                 <td>緊急聯絡人：<%=data.emergency%></td>
                 <td colspan="2">交通方式：<%=data.traffic%></td>
             </tr>
             <tr>
                 <td>身分證：<%=data.identity%></td>
-                <td>生日:<%= data.birthday.getFullYear()%>年
+                <td colspan="2">生日:<%= data.birthday.getFullYear()%>年
                     <%=data.birthday.getMonth()+1%>月
-                    <%=data.birthday.getDate()%>日
-                </td>
+                    <%=data.birthday.getDate()%>日</td>
             </tr>
             <tr>
-                <td colspan="4"><textarea readonly ><%=data.note%></textarea></td>
+                <td colspan="4"><textarea readonly  style="resize: none"><%=data.note%></textarea></td>
             </tr>
             <tr>
-                <td colspan="4"><img id="admit" src="data:image/;base64,<%=image%>"></td>
+                <td colspan="4"><img id="admit" src="data:image/;base64,<%=image%>" style="width: 50%;margin: 20px 25%;"></td>
             </tr>
         </table>
+        <style>
+            tr,td{
+                border: 1px solid lightgray;
+            }
+        </style>
         <input type="submit" data-id="<%=data.id%>" value="確認資格">
         <input type="submit" data-id="<%=data.id%>" value="取消資格">
     </div>

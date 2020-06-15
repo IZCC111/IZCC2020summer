@@ -10,7 +10,6 @@ $(document).ready(function () {
         $('input[type=submit]').prop('disabled',true)
         const sheet=$('#sign')[0];
         var form = new FormData(sheet);
-        form.append('file',$('input[type=file]')[0].files[0]);
         $.ajax({
             url: "/apply/register",
             type: 'POST',

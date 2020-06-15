@@ -74,8 +74,7 @@ router.get('/applylist',verify,async function (req,res) {
 router.get('/applylist/:id',async function (req,res) {
     const member = await apply.findOne({_id:req.params.id});
     if(!member) return res.status(404).render('error');
-    var image = Buffer.from(member.parentalConsent).toString('base64');
-    res.render('memberInfo',{data:member,image:image})
+    res.render('memberInfo',{data:member})
 })
 
 function shuffle(arr) {

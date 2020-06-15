@@ -14,6 +14,7 @@
                 <input type="submit">
             </form>
         </div>
+        <button id="test">test</button>
         <%include model/footer.ejs%>
     </body>
     <%include model/script.ejs%>
@@ -28,7 +29,7 @@
                 success: function (data) {
                     good_message(data);
                     setTimeout(function () {
-                        window.location.href='/';
+                        window.location.href='/applylist';
                     },1000)
 
                 }, error: function (data) {

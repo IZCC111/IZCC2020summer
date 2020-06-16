@@ -195,7 +195,7 @@ ul.clubs{
 	display: inline;
 }
 
-@media (max-width: 685px) {
+@media (max-width: 1210px) {
 	table {
 		display: block;
 		overflow-x: auto;

@@ -8,13 +8,10 @@ $(document).ready(function () {
             return bad_message('你輸入的資料已超過字數限制!')
         }
         $('input[type=submit]').prop('disabled',true)
-        const sheet=$('#sign')[0];
-        var form = new FormData(sheet);
+        const form = $('#sign').serialize();
         $.ajax({
             url: "/apply/register",
             type: 'POST',
-            contentType: false,
-            processData: false, // required
             data:  form,
             success: function (data) {
                 good_message(data);

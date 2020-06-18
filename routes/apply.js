@@ -4,7 +4,7 @@ const nodeMailer = require('nodemailer');
 const ejs = require('ejs');
 
 
-const transporter = nodeMailer.createTransport({
+/*const transporter = nodeMailer.createTransport({
     service:'gmail',
     auth: {
         type:'OAuth2',
@@ -14,7 +14,7 @@ const transporter = nodeMailer.createTransport({
         clientSecret:'Jii_L5XlQ4XsqCIaMXji-c39',
         refreshToken:'1//04Exl2_AUU7E_CgYIARAAGAQSNwF-L9IrPqNgA0M14nNtW4z77C2RRWvc16jLAK32KjGdNlWst3FcwlW5_4wJgJrSXiOZMtGupvI',
     },
-});
+});*/
 
 router.post('/register', async function(req, res) {
     const form =req.body;

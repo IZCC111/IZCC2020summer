@@ -65,6 +65,7 @@
         </style>
         <input type="submit" data-id="<%=data.id%>" value="確認資格">
         <input type="submit" data-id="<%=data.id%>" value="取消資格">
+        <input type="submit" data-id="<%=data.id%>" value="刪除資料">
     </div>
 </section>
 
@@ -78,10 +79,12 @@
 <%include model/script.ejs%>
 <script>
     $('input[type=submit]').on('click',function () {
+        var type='admit';
         const data=($(this).val() === '確認資格');
+        if($(this).val()==='刪除資料') type='delete';
         $.ajax({
             type:'GET',
-            url:'../../apply/admit/<%=data.id%>?value='+data,
+            url:'../../apply/'+type+'/<%=data.id%>?value='+data,
             success:function () {
                 good_message('成功改變資格為'+data);
                 setTimeout(function () {

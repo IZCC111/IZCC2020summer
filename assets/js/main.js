@@ -217,6 +217,9 @@
 			});
 
 })(jQuery);
+
+//custom alert
+//I think it's coooooooooooooooooooooooooooool
 function good_message(data) {
 	$('.pop').hide()
 	$('.alert-message').append('<div class="message-div"><div class="message-alert"><p class="message-content">' + data + '</p><div class="good-message-line"></div></div></div>');

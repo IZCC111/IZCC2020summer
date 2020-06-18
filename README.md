@@ -24,12 +24,11 @@ node app.js/nodemon app.js
 * `PASSWORD` - 管理員密碼
 * `DBCONNECT` - MongoDB的連接網址
 
-`subjects.json` - the course list and description
-```json
-{
-  "id": "id here",
-  "title": "Course Name",
-  "text": "Course Description",
-  "img": "Course image (put in images/)"
-}
-```
+## Note
+* 電子郵件寄信在apply的route，如果不想弄可以直接刪掉，要弄得話去查一下OAUth(Gmail)，如果有自己的郵件伺服器更方便
+* MongoDB可以用本地的或是Atlas(這次是用Atlas)，如果要的話(或很閒)可以改成SQL
+* 這次前端的模板是用ejs，放在views，assets放js跟css，files放家同，images放圖片，整個前端的樣式要換掉
+* applylist,login,memberInfo可以不用刪
+* 表單所需要的資料在model裡的applySchema.js
+
+

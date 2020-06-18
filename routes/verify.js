@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 
+//to verify if the cookie is admin
 module.exports  =function  (req,res,next) {
      const token = req.cookies.adminToken;
      if (!token) return res.redirect('/');

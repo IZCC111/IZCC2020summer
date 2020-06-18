@@ -4,10 +4,10 @@ const nodeMailer = require('nodemailer');
 const ejs = require('ejs');
 
 
-
-
+//handle apply request
 router.post('/register', async function(req, res) {
     const form =req.body;
+    //new apply info
     const formInfo = new apply({
         name:form.name,
         gender:form.gender,
@@ -24,6 +24,7 @@ router.post('/register', async function(req, res) {
         note:form.note,
     });
     try{
+        //mail configuration(use gmail)
         const transporter = nodeMailer.createTransport({
             host: "smtp.gmail.com",
             port: 465,
@@ -37,7 +38,9 @@ router.post('/register', async function(req, res) {
                 refreshToken:'1//04_-2N-UG9BlrCgYIARAAGAQSNwF-L9IrS2BJmRjF7DbvLxNMyPwRbo8wOLZE2fl7yYKJuztGwuXOaq9yAOcC8DztngqySGtQGpI',
             },
         });
+        //save
         await formInfo.save();
+        //render mail and send
         ejs.renderFile(__dirname+'/../views/applymail.ejs',{name:formInfo.name},
             (err,html)=>{
             const mail ={
@@ -53,17 +56,19 @@ router.post('/register', async function(req, res) {
         })
         res.send('報名成功!請隨時關注我們的粉專來確定活動消息!');
     }catch (e) {
+        //error handling
         console.log(e)
         res.status(400).send('你有欄位沒填或是字數超過限制!');
     }
 
 });
 
-
+//to admit an data
 router.get('/admit/:id',async function (req,res) {
     await apply.updateOne({_id:req.params.id},{$set:{success:req.query.value}})
     res.send('success')
 });
+//to delete an data
 router.get('/delete/:id',async function (req,res) {
     await apply.deleteOne({_id:req.params.id})
     res.send('deleted')

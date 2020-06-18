@@ -16,11 +16,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 dotenv.config();
 
+//connect database(MongoDB Atlas)
 mongoose.connect(process.env.DBCONNECT,
     {useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true}, () => console.log("DB Started"));
-
-
-
 
 
 // Insert your Google Analytics Id, Shoule be something like 'UA-12345678-9'
@@ -32,11 +30,13 @@ app.use(helmet());
 app.use(bodyParser.json({limit: '10mb'}));
 app.use(bodyParser.urlencoded({ extended: true, limit:'10mb' }));
 app.use(cookieParser());
+
+//static files
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
-app.use('/upload', express.static(path.join(__dirname, 'upload')));
 app.use('/file', express.static(path.join(__dirname, 'file')));
 
+//route
 app.use('/', indexRoute);
 app.use('/apply',applyRoute);
 
@@ -49,13 +49,12 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-
   // render the error page
   res.status(err.status || 500);
   res.render('error');
 });
 
-var server = http.createServer(app);
+const server = http.createServer(app);
 
 const port=process.env.PORT||80;
 

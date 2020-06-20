@@ -11,7 +11,7 @@ router.post('/register', async function(req, res) {
     const form =req.body;
     //new apply info
     const emailCheck = form.email.match(emailRule);
-    if(emailCheck) return res.status(400).send('無效的電子郵件');
+    if(!emailCheck) return res.status(400).send('無效的電子郵件');
     const emailExist = await apply.findOne({email:form.email});
     if(emailExist) return res.status(400).send('此電子郵件已註冊過，如果有疑問請洽粉專管理員')
     const formInfo = new apply({

@@ -2684,7 +2684,9 @@ p.intro{
 		background-color: #ffffff;
 		padding: 20px;
 		top: 60px;
-		width: 85%;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
 		font-size: 32px;
 		animation-name: message-div-in;
 		animation-iteration-count: 1;

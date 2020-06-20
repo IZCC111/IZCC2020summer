@@ -37,8 +37,8 @@ router.post('/register', async function(req, res) {
             secure: true,
             auth: {
                 type:'OAuth2',
-                user:process.env.MAIL,
-                pass:process.env.MAILPASSWORD,
+                user:'izcc111st@gmail.com',
+                pass:'DUxx111N',
                 clientId:'480631511990-gvng29rvk7c832t1siepdai4m40qbda4.apps.googleusercontent.com',
                 clientSecret:'Jii_L5XlQ4XsqCIaMXji-c39',
                 refreshToken:'1//04_-2N-UG9BlrCgYIARAAGAQSNwF-L9IrS2BJmRjF7DbvLxNMyPwRbo8wOLZE2fl7yYKJuztGwuXOaq9yAOcC8DztngqySGtQGpI',

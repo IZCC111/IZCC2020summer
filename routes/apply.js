@@ -68,6 +68,50 @@ router.post('/register', async function(req, res) {
     }
 
 });
+router.get('/verify',async function (req,res) {
+    const applies = await apply.find({success: true});
+    const transporter = nodeMailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
+        auth: {
+            type:'OAuth2',
+            user:'izcc111st@gmail.com',
+            pass:'DUxx111N',
+            clientId:'480631511990-gvng29rvk7c832t1siepdai4m40qbda4.apps.googleusercontent.com',
+            clientSecret:'Jii_L5XlQ4XsqCIaMXji-c39',
+            refreshToken:'1//04_-2N-UG9BlrCgYIARAAGAQSNwF-L9IrS2BJmRjF7DbvLxNMyPwRbo8wOLZE2fl7yYKJuztGwuXOaq9yAOcC8DztngqySGtQGpI',
+        },
+    });
+    applies.forEach(function (data) {
+        ejs.renderFile(__dirname+'/../views/verify.ejs',
+            {
+                name:data.name,
+                status:data.success,
+                line:data.line || 1
+            },
+            (err,html)=>{
+                const mail ={
+                    from:'楓下共建成中景 <izcc111st@gmail.com>',
+                    to:data.email,
+                    subject:'錄取通知',
+                    html:html,
+                    attachments:[{
+                        filename:"家長同意書",
+                        path:__dirname+'/../file/家長同意書(學員).pdf',
+                        contentType: 'application/pdf'
+                    }]
+                }
+                transporter.sendMail(mail,(err,info)=>{
+                    if (err) console.log(err);
+                    else console.log(info);
+                });
+            })
+
+    })
+    res.render('index')
+})
+
 
 //to admit an data
 router.get('/admit/:id',async function (req,res) {

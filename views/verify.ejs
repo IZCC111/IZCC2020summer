@@ -1,0 +1,64 @@
+<html lang="zh-tw">
+<head>
+    <title>楓下共建成中景 2020四校資訊營</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <link rel="shortcut icon" href="../images/icon.png"/>
+</head>
+<body style="background-color: rgba(0,0,0,0);background-image:url("intro.jpg")" >
+<section id="intro" class="main style1 dark fullscreen">
+    <div class="content" style="text-align: center">
+        <header>
+            <%if(status===true){ %>
+            <h2 style="font-weight: bold;color: black">恭喜貴子女<strong><%=name%></strong><br>錄取了本次的營隊!</h2>
+            <% }else if(status===false){%>
+            <h2 style="font-weight: bold;color: black">貴子女<strong><%=name%></strong><br>並沒有錄取本次的營隊</h2>
+            <%}%>
+        </header>
+        <%if(status===true){ %>
+            <p style="color: black;">
+                之後請依照下列方式匯款<br>
+                並且下載家長同意書，且列印出來，填寫完畢後拍照寄回到此電子郵件<br>
+                如有疑惑，請私訊我們的粉專管理員或是透過回覆此電子郵件來回復!
+            </p>
+        <% }else if(status===false){%>
+            <p style="color: black;">
+                貴子女的備取佇列為<%=line%>
+                如果之後有人退出，也將會第一時間使用此電子郵件通知您
+            </p>
+        <%}%>
+
+    </div>
+</section>
+
+<footer id="footer">
+
+    <table style="width: 80%;margin: 20px 10%;">
+        <tr>
+            <th colspan="2" style="font-family:'Noto Sans TC';font-weight: bold;color: black;text-decoration: underline;"><a href="https://url.ckcsc.net/7EgGXb" target="_blank" style="font-family:'Noto Sans TC';font-weight: bold;color: black;text-decoration: underline;">Facebook粉專</a></th>
+            <th colspan="2" style="font-family:'Noto Sans TC';font-weight: bold;color: black;text-decoration: underline;"><a href="https://url.ckcsc.net/4Xfxzy" target="_blank" style="font-family:'Noto Sans TC';font-weight: bold;color: black;text-decoration: underline;">Instagram粉專</a></th>
+        </tr>
+    </table>
+
+
+    <!-- Menu -->
+    <div class="menu" style="position: absolute;
+    bottom: 0;
+    text-align: center;
+    background: lightskyblue;
+    color: black;">
+        <div>&copy; IZCC SUMMER 2020</div>
+        <div>
+            <div style="display: inline"><a href="https://url.ckcsc.net/4yXMp" target="_blank" style="font-family:'Noto Sans TC';font-weight: normal;color: black;text-decoration: underline;">建中資訊 INFOR 33rd</a></div>
+            <div style="display: inline"><a href="https://url.ckcsc.net/5xHbdj" target="_blank" style="font-family:'Noto Sans TC';font-weight: normal;color: black;text-decoration: underline;">成功電研 CKCSC 33rd</a></div>
+            <div style="display: inline"><a href="https://url.ckcsc.net/urZUp" target="_blank" style="font-family:'Noto Sans TC';font-weight: normal;color: black;text-decoration: underline;">中山資研 ZSISC 27th</a></div>
+            <div style="display: inline"><a href="https://url.ckcsc.net/6u4mso" target="_blank" style="font-family:'Noto Sans TC';font-weight: normal;color: black;text-decoration: underline;">景美電資 CMIOC 27th</a></div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>

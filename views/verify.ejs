@@ -15,7 +15,7 @@
             <%if(status===true){ %>
             <h2 style="font-weight: bold;color: black">恭喜貴子女<strong><%=name%></strong><br>錄取了本次的營隊!</h2>
             <% }else if(status===false){%>
-            <h2 style="font-weight: bold;color: black">貴子女<strong><%=name%></strong><br>並沒有錄取本次的營隊</h2>
+            <h2 style="font-weight: bold;color: black">十分可惜貴子女<strong><%=name%></strong><br>並沒有錄取本次的營隊</h2>
             <%}%>
         </header>
         <%if(status===true){ %>
@@ -29,8 +29,10 @@
             </p>
         <% }else if(status===false){%>
             <p style="color: black;">
-                貴子女的備取佇列為<%=line%>
-                如果之後有人退出，也將會第一時間使用此電子郵件通知您
+                如果之後有人臨時退出<br>
+                將有可能錄取貴子女<br>
+                並且也將第一時間使用此電子郵件通知您!<br>
+                十分感謝您的支持!
             </p>
         <%}%>
 

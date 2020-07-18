@@ -98,7 +98,7 @@ router.get('/verify',async function (req,res) {
                     html:html,
                     attachments:[{
                         filename:"家長同意書",
-                        path:__dirname+'/../file/家長同意書(學員).pdf',
+                        path:__dirname+'/../file/學員家同.pdf',
                         contentType: 'application/pdf'
                     }]
                 }

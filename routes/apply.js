@@ -84,14 +84,14 @@ router.get('/verify',async function (req,res) {
             refreshToken:'1//04ZLbit44n6SnCgYIARAAGAQSNwF-L9IrvJOoTU0Qg4EytGFskBBO-unUPLf4cw76lyiEUBeZzHSDslqmB9lcWKOsUCPgMiZr5j0',
         },
     });
-    applies.forEach(function (data) {
-        ejs.renderFile(__dirname+'/../views/verify.ejs',
+    for (const data of applies) {
+        await ejs.renderFile(__dirname+'/../views/verify.ejs',
             {
                 name:data.name,
                 status:data.success,
 
             },
-            (err,html)=>{
+            async (err,html)=>{
                 const mail ={
                     from:'楓下共建成中景 <izcc111st@gmail.com>',
                     to:data.email,
@@ -103,33 +103,33 @@ router.get('/verify',async function (req,res) {
                         contentType: 'application/pdf'
                     }]
                 };
-                transporter.sendMail(mail,(err,info)=>{
+                await transporter.sendMail(mail,(err,info)=>{
                     if (err) console.log(err);
                     else console.log(info);
                 });
             })
 
-    });
-    notApplies.forEach(function (data) {
+    }
+    for (const data of notApplies) {
         ejs.renderFile(__dirname+'/../views/verify.ejs',
             {
                 name:data.name,
                 status:data.success,
             },
-            (err,html)=>{
+            async (err,html)=>{
                 const mail ={
                     from:'楓下共建成中景 <izcc111st@gmail.com>',
                     to:data.email,
                     subject:'報名結果通知',
                     html:html,
                 };
-                transporter.sendMail(mail,(err,info)=>{
+                await transporter.sendMail(mail,(err,info)=>{
                     if (err) console.log(err);
                     else console.log(info);
                 });
             })
 
-    });
+    }
     res.render('index')
 });
 

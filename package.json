@@ -15,7 +15,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.5",
     "multer": "^1.4.2",
-    "nodemailer": "^6.4.10",
+    "nodemailer": "^6.4.16",
     "nodemon": "^2.0.4",
     "walk": "^2.3.14"
   }

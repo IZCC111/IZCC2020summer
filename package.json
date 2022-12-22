@@ -12,7 +12,7 @@
     "express-google-analytics": "^1.0.2",
     "helmet": "^3.22.1",
     "http-errors": "~1.6.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.12.5",
     "multer": "^1.4.2",
     "nodemailer": "^6.4.10",
